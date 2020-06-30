@@ -11,14 +11,13 @@ public class MergeSort {
         System.out.println(Arrays.toString(A));
     }
 
-    private static int[] sort(int[] a, int low, int high) {
+    private static void sort(int[] a, int low, int high) {
         int mid = (low + high) / 2;
         if (low < high) {
             sort(a, low, mid);
             sort(a, mid + 1, high);
             merge(a, low, mid, high);
         }
-        return a;
     }
 
     private static void merge(int[] a, int low, int mid, int high) {
