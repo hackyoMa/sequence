@@ -49,9 +49,7 @@ public class MergeSort {
             j++;
         }
         // 用temp覆盖a
-        for (int k2 = 0; k2 < temp.length; k2++) {
-            a[k2 + low] = temp[k2];
-        }
+        if (temp.length >= 0) System.arraycopy(temp, 0, a, low, temp.length);
     }
 
 }
